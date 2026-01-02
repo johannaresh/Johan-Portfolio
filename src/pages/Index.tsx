@@ -99,8 +99,7 @@ const Index = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Senior Software Engineer navigating the digital cosmos. Building
-              exceptional web experiences, one star system at a time.
+              Engineering systems at the intersection of data and performance.
             </p>
 
             {/* CTA Buttons */}
