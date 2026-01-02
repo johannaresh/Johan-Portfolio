@@ -96,7 +96,7 @@ const Projects = () => {
                 <span>// SECTOR: PROJECTS</span>
               </div>
 
-              <h1 className="font-orbitron text-3xl md:text-4xl text-foreground">Asteroid Field</h1>
+              <h1 className="font-orbitron text-3xl md:text-4xl text-foreground">Project Field</h1>
 
               <p className="text-muted-foreground mt-2">{headerSubtitle}</p>
 
