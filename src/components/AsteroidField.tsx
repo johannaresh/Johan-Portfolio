@@ -804,7 +804,6 @@ const centroid = (poly: Pt[]) => {
           </div>
 
           <div className="py-4 flex justify-center pointer-events-none">
-            <p className="text-xs text-muted-foreground/70 font-mono">[ CLICK ASTEROID TO EXPLORE PROJECT ]</p>
           </div>
         </div>
       </div>
