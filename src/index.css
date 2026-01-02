@@ -1,0 +1,413 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/orbitron/400.css';
+@import '@fontsource/orbitron/700.css';
+@import '@fontsource/orbitron/900.css';
+
+/* Space Portfolio Design System */
+@layer base {
+  :root {
+    /* Deep space background */
+    --background: 230 25% 5%;
+    --foreground: 200 100% 95%;
+
+    /* Card surfaces with glassmorphism */
+    --card: 220 30% 8%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 200 100% 95%;
+
+    /* Primary: Neon Cyan */
+    --primary: 185 100% 50%;
+    --primary-foreground: 230 25% 5%;
+    --primary-glow: 185 100% 60%;
+
+    /* Secondary: Deep Purple */
+    --secondary: 270 60% 40%;
+    --secondary-foreground: 200 100% 95%;
+    --secondary-glow: 270 80% 60%;
+
+    /* Muted space tones */
+    --muted: 220 20% 15%;
+    --muted-foreground: 200 30% 60%;
+
+    /* Accent: Warm Orange (for highlights) */
+    --accent: 25 100% 55%;
+    --accent-foreground: 230 25% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders with glow potential */
+    --border: 200 50% 20%;
+    --input: 220 30% 15%;
+    --ring: 185 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom space colors */
+    --space-dark: 230 30% 3%;
+    --space-deep: 240 30% 8%;
+    --nebula: 280 60% 25%;
+    --star: 45 100% 90%;
+    --hologram: 185 100% 70%;
+    --hologram-purple: 270 100% 70%;
+
+    /* Gradients */
+    --gradient-space: linear-gradient(180deg, hsl(var(--space-dark)) 0%, hsl(var(--space-deep)) 60%, hsl(230 25% 8%) 100%);
+    --gradient-hud: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--secondary) / 0.05) 100%);
+    --gradient-hologram: linear-gradient(180deg, hsl(var(--hologram) / 0.8) 0%, hsl(var(--hologram-purple) / 0.6) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-hologram: 0 0 30px hsl(var(--hologram) / 0.4), inset 0 0 20px hsl(var(--hologram) / 0.1);
+    --shadow-card: 0 8px 32px hsl(var(--space-dark) / 0.8);
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 230 30% 6%;
+    --sidebar-foreground: 200 100% 90%;
+    --sidebar-primary: 185 100% 50%;
+    --sidebar-primary-foreground: 230 25% 5%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 200 100% 90%;
+    --sidebar-border: 200 50% 15%;
+    --sidebar-ring: 185 100% 50%;
+  }
+
+  /* No light mode - space is always dark */
+  .dark {
+    --background: 230 25% 5%;
+    --foreground: 200 100% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--gradient-space);
+    min-height: 100vh;
+  }
+
+  body::before {
+  content: '';
+  position: fixed;
+  inset: -120px;
+  pointer-events: none;
+  z-index: -1;
+
+  border: 2px solid hsl(var(--primary) / 0.2);
+  box-shadow:
+    inset 0 0 100px hsl(var(--space-dark) / 0.8),
+    inset 0 0 200px hsl(var(--space-dark) / 0.5);
+
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Always-on vignette overlay that covers iOS overscroll bounce */
+body::after {
+  content: '';
+  position: fixed;
+  inset: -140px; /* oversize so rubber-band never reveals edges */
+  pointer-events: none;
+  z-index: -1; /* above stars (z-0), below content (z-20) */
+  background:
+    radial-gradient(ellipse at center, transparent 35%, hsl(var(--space-dark) / 0.75) 100%),
+    linear-gradient(180deg, hsl(var(--space-dark) / 0.35), hsl(var(--space-dark) / 0.55));
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+  /* Sci-fi heading font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  /* Custom themed scrollbar (global + per-element) */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: hsl(var(--space-dark) / 0.55);
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.35);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.7), hsl(var(--secondary) / 0.7));
+    border-radius: 999px;
+    box-shadow:
+      0 0 10px hsl(var(--primary) / 0.35),
+      0 0 18px hsl(var(--secondary) / 0.18);
+    border: 2px solid hsl(var(--space-dark) / 0.65);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.9));
+    box-shadow:
+      0 0 14px hsl(var(--primary) / 0.5),
+      0 0 26px hsl(var(--secondary) / 0.25);
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.85) hsl(var(--space-dark) / 0.55);
+  }
+}
+
+@layer components {
+  /* HUD Panel Effect */
+  .hud-panel {
+    @apply relative overflow-hidden rounded-lg;
+    background: linear-gradient(135deg, hsl(var(--card) / 0.8) 0%, hsl(var(--muted) / 0.6) 100%);
+    border: 1px solid hsl(var(--primary) / 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card), inset 0 1px 0 hsl(var(--primary) / 0.1);
+  }
+
+  .hud-panel::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.05) 0%, transparent 50%);
+  }
+
+  /* Hologram Effect */
+  .hologram {
+    @apply relative;
+    text-shadow: 0 0 10px hsl(var(--hologram)), 0 0 20px hsl(var(--hologram) / 0.5);
+  }
+
+  .hologram-card {
+    @apply relative overflow-hidden rounded-lg p-6;
+    background: linear-gradient(135deg, hsl(var(--hologram) / 0.05) 0%, hsl(var(--hologram-purple) / 0.03) 100%);
+    border: 1px solid hsl(var(--hologram) / 0.3);
+    box-shadow: var(--shadow-hologram);
+  }
+
+  .hologram-card::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none opacity-30;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(var(--hologram) / 0.03) 2px,
+      hsl(var(--hologram) / 0.03) 4px
+    );
+    animation: scanline 8s linear infinite;
+  }
+
+  /* Neon Glow Text */
+  .neon-text {
+    color: hsl(var(--primary));
+    text-shadow: 
+      0 0 5px hsl(var(--primary)),
+      0 0 10px hsl(var(--primary)),
+      0 0 20px hsl(var(--primary) / 0.8),
+      0 0 40px hsl(var(--primary) / 0.6);
+  }
+
+  .neon-text-soft {
+  color: hsl(var(--primary));
+  text-shadow:
+    0 0 5px hsl(var(--primary)),
+      0 0 10px hsl(var(--primary) / 0.3),
+      0 0 20px hsl(var(--primary) / 0.2),
+      0 0 40px hsl(var(--primary) / 0.2);
+  }
+
+  /* Asteroid Style */
+  .asteroid {
+    @apply relative cursor-pointer transition-all duration-300;
+    filter: drop-shadow(0 0 10px hsl(var(--muted-foreground) / 0.3));
+  }
+
+  .asteroid:hover {
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.6));
+    transform: scale(1.05);
+  }
+
+  /* Cockpit Frame */
+  .cockpit-frame {
+  position: fixed;
+  inset: -120px;
+  pointer-events: none;
+  z-index: 10;
+
+  /* iOS Safari fixed-position stability helpers */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+
+.cockpit-frame::before {
+  content: '';
+  position: absolute;
+  left: -80px;
+  right: -80px;
+  top: -40vh;
+  height: 55vh;
+  background: linear-gradient(180deg, hsl(var(--space-dark)) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.cockpit-frame::after {
+  content: '';
+  position: absolute;
+  left: -80px;
+  right: -80px;
+  bottom: -50vh;
+  height: 70vh;
+  background: linear-gradient(0deg, hsl(var(--space-dark)) 0%, transparent 100%);
+  pointer-events: none;
+}
+}
+
+@layer utilities {
+  /* Glow animations */
+  .glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .drift {
+    animation: drift 20s linear infinite;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .glow-pulse,
+    .float,
+    .drift {
+      animation: none;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Keyframes */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(20px) rotate(360deg);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes hyperspeed {
+  0% {
+    transform: translateZ(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(500px) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Star streak for hyperspeed */
+@keyframes star-streak {
+  0% {
+    transform: translateZ(-100px) scaleY(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(1000px) scaleY(50);
+    opacity: 0;
+  }
+}
+
+/* iOS bounce: prevent white showing above/below the page */
+html {
+  background-color: hsl(var(--space-dark));
+}
+
+
+
+
+
+body {
+  background-color: hsl(var(--space-dark)); /* fallback behind your gradient */
+  overscroll-behavior-y: none;              /* helps on modern iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+html, body, #root {
+  background-color: hsl(var(--space-dark));
+  background-image: var(--gradient-space);
+  min-height: 100%;
+}

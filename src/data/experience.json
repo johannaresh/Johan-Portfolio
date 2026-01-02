@@ -1,0 +1,57 @@
+[
+  {
+    "id": "marble-fullstack-engineer",
+    "role": "Full Stack Engineer",
+    "company": "Marble Investments",
+    "period": "Apr 2025 - Present",
+    "location": null,
+    "description": "Built data infrastructure and internal tooling for quantitative research and portfolio analytics.",
+    "achievements": [
+      "Built asynchronous Python pipelines to acquire, filter, and normalize a NASDAQ/NYSE equities dataset (market cap, diluted EPS, analyst estimates), reducing acquisition time by 80%",
+      "Designed MongoDB architecture to store and update key financial metrics (PE, revenue, profit margins) for fast research and dashboard retrieval",
+      "Developed a Next.js + TypeScript internal dashboard with live data feeds for real-time portfolio analytics and quantitative screening"
+    ],
+    "tech": ["Python", "Async IO", "MongoDB", "Next.js", "TypeScript"]
+  },
+  {
+    "id": "opportunitieshq-lead-web-dev",
+    "role": "Lead Web Developer",
+    "company": "Opportunities HQ",
+    "period": "Oct 2024 - Apr 2025",
+    "location": null,
+    "description": "Developed an end-to-end opportunity discovery platform and improved search, discovery, and tracking.",
+    "achievements": [
+      "Developed an end-to-end opportunity discovery platform with full-stack architecture using HTML/CSS/JS",
+      "Implemented dynamic filters and persistent local bookmarks using JSON and localStorage for fast program discovery",
+      "Integrated SEO analytics via Google Search Console and real-time user tracking with GoatCounter"
+    ],
+    "tech": ["HTML", "CSS", "JavaScript", "JSON", "localStorage", "Google Search Console", "GoatCounter"]
+  },
+  {
+    "id": "cmhq-executive-ops",
+    "role": "Executive of Operations",
+    "company": "CMHQ",
+    "period": "Jun 2024 - Jul 2025",
+    "location": null,
+    "description": "Led operations, partnerships, and onboarding systems for youth-led nonprofit organizations.",
+    "achievements": [
+      "Led partnership and outreach efforts for youth-led NPOs, increasing funding for YLNPOs by up to 30% through strategic partnerships with Microsoft, Google, and Movember",
+      "Developed verification infrastructure and improved onboarding workflows for 20+ nonprofit organizations"
+    ],
+    "tech": ["Operations", "Partnerships", "Outreach"]
+  },
+  {
+    "id": "career-compass-journalism",
+    "role": "Head of Journalism and Staff",
+    "company": "Career Compass Coalition",
+    "period": "May 2024 - Aug 2025",
+    "location": null,
+    "description": "Scaled distribution and led editorial operations for a student-led education initiative.",
+    "achievements": [
+      "Grew Google Classroom userbase from 1,000 to 17,500+ students, alongside 24,000+ social media followers",
+      "Managed editorial pipeline for 14 student writers, leading survey-driven newsletter production",
+      "Built and deployed the organization’s first centralized web resource using modern static architecture"
+    ],
+    "tech": ["Content Ops", "Google Classroom", "Web (Static)", "Editorial Pipeline"]
+  }
+]

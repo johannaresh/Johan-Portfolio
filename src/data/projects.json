@@ -1,0 +1,91 @@
+[
+  {
+    "id": "visionary",
+    "name": "Visionary",
+    "tagline": "AI-driven learning and productivity web experience",
+    "description": "Visionary is a web app experience built around an AI-assisted workflow. I focused on the front end and JavaScript logic, implementing interactive UI behavior and client-side functionality to support the core user flows.",
+    "tech": ["JavaScript", "Frontend", "UI Logic"],
+    "links": {
+      "github": "https://github.com/austinjiann/Visionary",
+      "demo": "https://www.youtube.com/watch?v=gV9z8ITwAZI&t"
+    },
+    "impact": [
+      "Built front-end features and client-side logic for key user flows",
+      "Improved UX responsiveness through interactive UI behavior",
+      "Shipped a demo-ready product showcase video"
+    ],
+    "asteroid": {
+      "x": 0.3,
+      "y": 0.35,
+      "size": 80,
+      "color": "primary"
+    }
+  },
+  {
+    "id": "rep-track",
+    "name": "Rep Track",
+    "tagline": "Real-time gym rep counter with live dashboard",
+    "description": "A real-time gym rep counter that streams motion sensor data into a live dashboard. The system integrates low-latency sensor ingestion with a WebSocket pipeline and a responsive web UI for session tracking.",
+    "tech": ["C++", "Node.js", "WebSockets", "Supabase", "HTML", "CSS", "JavaScript"],
+    "links": {
+      "github": "https://github.com/johannaresh/Hack-Western",
+      "demo": "https://youtu.be/awcFSM7dUa4"
+    },
+    "impact": [
+      "Integrated accelerometer and gyroscope streams for low-latency rep counting",
+      "Built a WebSocket pipeline to power a live dashboard with session metrics",
+      "Enabled real-time visualization of counts, timers, and workout tracking"
+    ],
+    "asteroid": {
+      "x": 0.7,
+      "y": 0.25,
+      "size": 90,
+      "color": "secondary"
+    }
+  },
+  {
+    "id": "marketmeet",
+    "name": "MarketMeet",
+    "tagline": "CS + Finance stock selection to match benchmark returns",
+    "description": "A Waterloo CS + Finance project that programmatically selects equities to match benchmark market returns. It ingests TA-provided tickers, downloads historical pricing data, computes returns and risk metrics, scores candidates, and optimizes portfolio weights under real constraints.",
+    "tech": ["Python", "pandas", "yfinance", "NumPy", "SciPy (SLSQP)", "Asyncio"],
+    "links": {
+      "github": "https://github.com/tanvibatchu/MarketMeet",
+      "demo": null
+    },
+    "impact": [
+      "Built an end-to-end pipeline: ticker cleaning, downloads, returns, and screening",
+      "Asynchronously fetched metadata (sector, market cap, earnings) to enrich selection constraints",
+      "Optimized weights to minimize tracking error while respecting sector and cap constraints"
+    ],
+    "asteroid": {
+      "x": 0.5,
+      "y": 0.6,
+      "size": 70,
+      "color": "accent"
+    }
+  },
+  {
+    "id": "betterbuy-smac",
+    "name": "BetterBuy",
+    "tagline": "Finalist mobile app for sustainable purchasing decisions",
+    "description": "A mobile app built for the SMAC AI App Competition that helps users make more sustainable purchases using barcode, photo, or text inputs and AI-assisted scoring. Includes user preference storage and caching for fast reuse of prior scans.",
+    "tech": ["Dart", "C++", "Swift", "CMake", "Gemini API"],
+    "links": {
+      "github": "https://github.com/johannaresh/smac24",
+      "demo": null
+    },
+    "impact": [
+      "Finalist in a nationwide AI app competition",
+      "Implemented multi-input flows (barcode, photo, text) to score products",
+      "Added persistent caching and customization for a smoother UX"
+    ],
+    "asteroid": {
+      "x": 0.2,
+      "y": 0.7,
+      "size": 55,
+      "color": "hologram"
+    }
+  }
+  
+]
