@@ -19,3 +19,4 @@ Personal portfolio website showcasing my projects, experience, and contact infor
 ```sh
 npm install
 npm run dev
+
