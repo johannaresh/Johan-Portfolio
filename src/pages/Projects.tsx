@@ -69,7 +69,7 @@ const Projects = () => {
   const headerSubtitle = useMemo(() => {
     return isMobile
       ? 'Browse projects in grid view. For the cinematic view, open on a laptop/desktop.'
-      : 'Navigate through my constellation of projects';
+      : 'Navigate through my constellation of projects (tap Asteroid/Card to expand project details)';
   }, [isMobile]);
 
   return (
