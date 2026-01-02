@@ -110,7 +110,7 @@ const Card = ({ exp, index }: { exp: Experience; index: number }) => {
     <div className="relative z-10 hologram-card w-full group hover:scale-[1.02] transition-transform duration-300">
       {/* Status indicator */}
       <div className="absolute top-4 right-4 flex items-center gap-2">
-        <div className="w-2 h-2 rounded-full bg-hologram animate-pulse" />
+        <div className={`w-2 h-2 rounded-full animate-pulse ${index === 0 ? 'bg-hologram' : 'bg-purple-500'}`}/>
         <span className="text-[10px] font-mono text-hologram/80 uppercase">
           {index === 0 ? 'Current' : 'Complete'}
         </span>
