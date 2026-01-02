@@ -78,7 +78,7 @@ const Experience = () => {
                     Frontend
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Framer Motion'].map(
+                    {['React', 'TypeScript', 'Next.js', 'HTML/CSS', 'Tailwind CSS', 'Framer Motion'].map(
                       (skill) => (
                         <span
                           key={skill}
@@ -97,7 +97,7 @@ const Experience = () => {
                     Backend
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {['Node.js', 'Python', 'PostgreSQL', 'GraphQL', 'Redis', 'Docker'].map(
+                    {['Node.js', 'Python', 'WebSockets', 'REST APIs', 'PostgreSQL', 'MongoDB',].map(
                       (skill) => (
                         <span
                           key={skill}
@@ -113,10 +113,10 @@ const Experience = () => {
 
                 <div>
                   <h3 className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                    Cloud & DevOps
+                    SYSTEMS & DATA
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {['AWS', 'GCP', 'Kubernetes', 'CI/CD', 'Terraform'].map((skill) => (
+                    {['C++','Serial I/O','Pandas','NLP','Dart'].map((skill) => (
                       <span
                         key={skill}
                         className="px-3 py-1.5 rounded-md text-sm
@@ -130,10 +130,10 @@ const Experience = () => {
 
                 <div>
                   <h3 className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                    Soft Skills
+                    Other Skills
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {['Leadership', 'Mentoring', 'Architecture', 'Communication'].map((skill) => (
+                    {['Leadership', 'Public Speaking', 'Market-Analysis', 'Backtesting'].map((skill) => (
                       <span
                         key={skill}
                         className="px-3 py-1.5 rounded-md text-sm
