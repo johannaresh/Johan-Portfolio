@@ -253,7 +253,7 @@ const Index = () => {
             className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16"
           >
             {[
-              { value: "30M", label: "Rows Analysed" },
+              { value: "90M", label: "Rows Analysed" },
               { value: "20k", label: "Students Impacted" },
               { value: "30%", label: "Portfolio Outperformance" },
             ].map((stat, i) => (
