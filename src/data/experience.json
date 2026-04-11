@@ -9,7 +9,7 @@
     "achievements": [
       "Built asynchronous Python pipelines to acquire, filter, and normalize a NASDAQ/NYSE equities dataset (market cap, diluted EPS, analyst estimates), reducing acquisition time by 80%",
       "Designed MongoDB architecture to store and update key financial metrics (PE, revenue, profit margins) for fast research and dashboard retrieval",
-      "Developed a Next.js + TypeScript internal dashboard with live data feeds for real-time portfolio analytics and quantitative screening"
+      "Developed a Next.js + TypeScript internal dashboard with live data feeds for real-time portfolio analytics and quantitative screening."
     ],
     "tech": ["Python", "Async IO", "MongoDB", "Next.js", "TypeScript"]
   },
@@ -35,8 +35,8 @@
     "location": null,
     "description": "Led operations, partnerships, and onboarding systems for youth-led nonprofit organizations.",
     "achievements": [
-      "Led partnership and outreach efforts for youth-led NPOs, increasing funding for YLNPOs by up to 30% through strategic partnerships with Microsoft, Google, and Movember",
-      "Developed verification infrastructure and improved onboarding workflows for 20+ nonprofit organizations"
+      "Led partnership and outreach efforts for youth-led NPOs, increasing funding for YLNPOs by up to 30% through strategic partnerships with Microsoft, Google, and Movember.",
+      "Developed verification infrastructure and improved onboarding workflows for 20+ nonprofit organizations."
     ],
     "tech": ["Operations", "Partnerships", "Outreach"]
   },
@@ -50,7 +50,7 @@
     "achievements": [
       "Grew Google Classroom userbase from 1,000 to 17,500+ students, alongside 24,000+ social media followers",
       "Managed editorial pipeline for 14 student writers, leading survey-driven newsletter production",
-      "Built and deployed the organization’s first centralized web resource using modern static architecture"
+      "Built and deployed the organization’s first centralized web resource using modern static architecture."
     ],
     "tech": ["Content Ops", "Google Classroom", "Web (Static)", "Editorial Pipeline"]
   }
